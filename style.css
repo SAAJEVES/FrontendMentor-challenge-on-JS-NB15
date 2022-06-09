@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;1,700&display=swap');
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 10px;
+    --BLUE : hsl(223, 87%, 63%);
+    --PB: hsl(223, 100%, 88%);
+    --LR: hsl(354, 100%, 66%);
+    --GRAY: hsl(0, 0%, 59%);
+    --VDB: hsl(209, 33%, 12%);
+}
+
+body {
+    padding: 30px;
+}
+
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-logo {
+    width: 100%;
+}
+
+.header-logo img {
+    object-fit: contain;
+}
+
+
+
+/* MAIN */
+.main {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+/* FORM CONTAINER */
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 100%;
+}
+
+.heading {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--GRAY);
+    margin-bottom: 7px;
+}
+
+.heading h1 span.special {
+    font-weight: 700;
+    color: var(--VDB);
+}
+
+.heading .sub {
+    font-size: 1.6rem;
+    color: var(--GRAY);
+}
+
+.email-sub {
+    width: 100%;
+    text-align: center;
+}
+
+.email-sub::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.input-email {
+    float: left;
+    width: 60%;
+    margin-right: 10px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+input[type = email] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.4rem;
+    border: 1px solid var(--BLUE);
+    outline: none;
+    border-radius: 20px;
+}
+
+input[type = email]::placeholder {
+    opacity: .3;
+}
+
+
+p.alert {
+    padding: 3px 17px;
+    color: var(--LR);
+}
+
+button {
+    width: 30%;
+    padding: 12px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    background-color: var(--BLUE);
+    color: #fff;
+    float: left;
+    box-shadow: 0px 0px 7px var(--PB);
+    cursor: pointer;
+}
+
+
+
+/* IMAGE CONTAINER */
+.img-container {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.img-container img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
+/* FOOTER  */
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+ul.socials {
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+ul.socials li {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border: 1px solid var(--BLUE);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+ul.socials li:hover {
+    background-color: var(--BLUE);
+}
+
+ul.socials li a {
+    display: inline-block;
+    font-size: 1.4rem;
+    padding-top: 5px;
+    color: var(--BLUE);
+}
+
+ul.socials li:hover a {
+    color: #fff;
+}
+
+p.copy {
+    color: var(--GRAY);
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 860px) {
+    .form-container {
+        width: 70%;
+    }
+
+    .img-container {
+        width: 73%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .input-email {
+        float: none;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    button {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+
+    .img-container {
+        width: 73%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .header-logo img {
+        width: 50px;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .heading .sub {
+        font-size: 1.4rem;
+    }
+
+    .img-container {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .img-container {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    input[type = email] {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+
+    .img-container {
+        width: 95%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    ul.socials li {
+        height: 22px;
+        width: 22px;
+    }
+
+    ul.socials li a {
+        font-size: 1.0rem;
+        padding-top: 4px;
+    }
+
+    p.copy {
+        font-size: 1rem;
+    }
+}
